@@ -30,6 +30,7 @@ import { priceCalculation } from '../components/init_price_calculation';
 // import { initSelect2 } from '../components/init_select2';
 
 import { loadDynamicBannerText } from '../components/banner';
+import { initMapbox } from '../components/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,5 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   priceCalculation();
   // initMapbox();
   loadDynamicBannerText();
+  initMapbox();
 });
-
