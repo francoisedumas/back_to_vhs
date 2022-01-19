@@ -124,6 +124,10 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mailjet (1.6.0)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client (>= 2.0.0)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
@@ -279,6 +283,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  mailjet
   mimemagic!
   pg (>= 0.18, < 2.0)
   pg_search (~> 2.3.0)

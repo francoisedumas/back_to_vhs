@@ -40,3 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initMapbox();
 });
+
+import "controllers"
