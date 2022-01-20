@@ -1,0 +1,11 @@
+<% unless cookies[:accept_google_analytics].present? %>
+  <div class="consent-banner">
+    <p>Nous utilisons les cookies et google analytics pour améliorer l'expérience de navigation sur le site.</p>
+    <div class="accept-decline-box">
+      <%= link_to "Accepter", url_for(controller: controller_name, action: action_name, accept_google: "true"),
+          class:"btn btn-grass" %>
+      <%= link_to "Refuser", url_for(controller: controller_name, action: action_name, accept_google: "false"),
+          class:"btn btn-gray" %>
+    </div>
+  </div>
+<% end %>
