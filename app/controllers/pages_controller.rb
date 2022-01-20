@@ -21,7 +21,7 @@ class PagesController < ApplicationController
   def send_contact_mail
     @contact_form = Form.new(contact_params)
     if @contact_form.valid?
-      ContactMailer.contact_email(@contact_form).deliver_now
+      ContactMailer.contact_email(@contact_form).deliver
       redirect_to root_path
     else
       flash[:alert] = "Something wrong!"
