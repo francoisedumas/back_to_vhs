@@ -29,7 +29,7 @@ import { priceCalculation } from '../components/init_price_calculation';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-import { loadDynamicBannerText } from '../components/banner';
+// import { loadDynamicBannerText } from '../components/banner';
 import { initMapbox } from '../components/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
@@ -37,7 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   priceCalculation();
   // initMapbox();
-  loadDynamicBannerText();
+  // loadDynamicBannerText();
   initMapbox();
 });
 
