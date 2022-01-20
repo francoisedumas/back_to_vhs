@@ -3,8 +3,8 @@
 
 	<div class= "cards">
 		<%= simple_form_for @contact_form, url: contact_path, html: { id: 'contact_form' }, data: {controller: "toggle"} do |f| %>
+			<%= f.error_notification %>
 			<div class="contact-box">
-				<%= f.error_notification %>
 
 				<%= f.input :first_name,
 										required: true,
