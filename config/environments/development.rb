@@ -31,8 +31,15 @@ Rails.application.configure do
   # Store uploaded files on cloudinary (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
 
+  # User Mailjet as delivery method.
+  config.action_mailer.delivery_method = :mailjet
+
+  # By default this is on false, preventing mails to be sent from your development environment
+  config.action_mailer.perform_deliveries = true
+
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
