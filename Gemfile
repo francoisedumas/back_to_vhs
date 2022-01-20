@@ -39,6 +39,7 @@ gem 'pg_search', '~> 2.3.0'
 gem 'devise'
 gem 'turbolinks_render'
 gem 'geocoder'
+gem 'mailjet'
 
 group :development, :test do
   gem 'pry-byebug'

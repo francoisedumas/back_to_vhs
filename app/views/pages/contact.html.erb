@@ -1,0 +1,48 @@
+<div class="container-cards">
+  <h2>Contact us</h2>
+
+	<div class= "cards">
+		<%= simple_form_for @contact_form, url: contact_path, html: { id: 'contact_form' }, data: {controller: "toggle"} do |f| %>
+			<%= f.error_notification %>
+			<div class="contact-box">
+
+				<%= f.input :first_name,
+										required: true,
+										autofocus: true,
+										label: 'First name' %>
+
+				<%= f.input :last_name,
+										required: true,
+										label: 'Last name' %>
+
+				<%= f.input :email,
+										required: true,
+										label: 'Email' %>
+
+				<%= f.input :message,
+										as: :text,
+										required: true,
+										label: 'Message' %>
+			</div>
+
+			<div class="form__radio">
+				<%= f.input :role,
+										as: :radio_buttons,
+										collection: Form::CONTACT_REQUEST_ROLE,
+										label: "I am",
+										input_html: { data: {action: "click->toggle#toggle" } } %>
+			</div>
+
+			<div data-toggle-target="list" class="element-toggle">
+				<%= f.input :workshop,
+										as: :radio_buttons,
+										collection: Form::WORKSHOP,
+										label: "Select a workshop" %>
+			</div>
+
+			<div class="vhs-button mr-3">
+				<%= f.button :submit, 'Send' %>
+			</div>
+		<% end %>
+	</div>
+</div>

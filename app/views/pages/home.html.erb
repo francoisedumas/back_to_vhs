@@ -10,10 +10,9 @@
 
 <%# --------- Card --------- %>
 <div class="container-cards">
-<h2>Special 90's selection</h2>
+  <h2>Special 90's selection</h2>
 
 	<div class= "cards">
-
 		<% @movies_selection.each do |movie| %>
       <div class="card-category">
         <%= cl_image_tag movie.photo.key, height: 200, width: 130 %><br><br>

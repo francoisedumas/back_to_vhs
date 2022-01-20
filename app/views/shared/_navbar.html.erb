@@ -15,6 +15,9 @@
           <%= link_to "Index", movies_path, class: "vhs-button mr-3" %>
         </li>
         <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "vhs-button mr-3" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "My Bookings", dashboard_path, class: "vhs-button mr-3" %>
         </li>
         <li class="nav-item">
@@ -26,6 +29,9 @@
       <% else %>
         <li class="nav-item">
           <%= link_to "Index", movies_path, class: "vhs-button mr-3" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "vhs-button mr-3" %>
         </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "vhs-button mr-3" %>
