@@ -8,7 +8,8 @@ class Owner::MoviesController < ApplicationController
     # Need to provide the current user in order to add an owner
     @movie.owner = current_user
     if @movie.save
-      redirect_to movies_path, notice: 'movie was successfully created.'
+      flash[:notice] = "movie was successfully created."
+      redirect_to movie_path(@movie)
     else
       render :new
     end
