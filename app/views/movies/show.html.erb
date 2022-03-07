@@ -58,11 +58,11 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" data-controller="insert-in-list">
 
   <div class="row">
     <div class="col-12">
-      <div id="reviews">
+      <div id="reviews" data-insert-in-list-target="items">
         <% if @movie.reviews.blank? %>
           Be the first to leave a review for <%= @movie.title %>
         <% else %>
@@ -76,7 +76,9 @@
 
   <div class="row">
     <div class="col-6">
-      <%= simple_form_for([ @movie, @review ]) do |f| %>
+      <%= simple_form_for([ @movie, @review ],
+                      data: { insert_in_list_target: "form",
+                      action: "submit->insert-in-list#send" }) do |f| %>
         <%= f.input :content, as: :text %>
         <%= f.submit "Soumettre", class: "vhs-button w-100" %>
       <% end %>
