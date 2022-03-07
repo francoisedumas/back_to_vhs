@@ -59,3 +59,12 @@
 
 </div>
 
+<div id="reviews">
+  <% if @movie.reviews.blank? %>
+    Be the first to leave a review for <%= @movie.title %>
+  <% else %>
+    <% @movie.reviews.each do |review| %>
+      <p><%= review.content %></p>
+    <% end %>
+  <% end %>
+</div>
