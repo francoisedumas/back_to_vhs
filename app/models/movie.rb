@@ -2,6 +2,7 @@ class Movie < ApplicationRecord
   belongs_to :owner, class_name: "User" # movie.owner
   has_many :bookings
   has_one_attached :photo
+  has_many :reviews, dependent: :destroy
 
   scope :jurassic, -> { where("title ILike ?", '%jurassic%') }
 
